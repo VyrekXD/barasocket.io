@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "model",
+			"problemMatcher": [],
+			"label": "npm: model",
+			"detail": "npx prisma generate"
+		},
+		{
+			"type": "npm",
+			"script": "push:fix",
+			"problemMatcher": [],
+			"label": "npm: push.fix",
+			"detail": "git add . && git commit -m \"🛠 Fix\" && git push origin main"
+		},
+		{
+			"type": "npm",
+			"script": "lint:fix",
+			"problemMatcher": [],
+			"label": "npm: lint.fix",
+			"detail": "eslint ./ --fix"
+		}
+	]
+}
+

@@ -1,0 +1,22 @@
+{
+	"name": "barasocket.io",
+	"version": "1.0.0",
+	"description": "Transfer bara images between telegram, sphynXL and bara supremacy",
+	"main": "build/index.js",
+	"type": "module",
+	"scripts": {
+		"test": "nodemon -e \"ts\", --exec \"tsc && node --experimental-json-modules . \"",
+		"test:nowatch": "tsc && node --experimental-json-modules . ",
+		"push:fix": "git add . && git commit -m \"🛠 Fix\" && git push origin main",
+		"build": "tsc",
+		"start": "node --experimental-json-modules .",
+		"model": "npx prisma generate"
+	},
+	"keywords": [],
+	"author": "Vyrek",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"socket.io": "^4.4.1"
+	}
+}
+
