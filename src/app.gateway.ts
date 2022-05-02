@@ -11,11 +11,7 @@ import {
 
 config()
 
-@WebSocketGateway({
-	cors: {
-		origin: '*'
-	}
-})
+@WebSocketGateway({})
 export class ImagesGateway implements OnGatewayConnection, OnGatewayDisconnect {
 	@WebSocketServer()
 	server
@@ -33,6 +29,7 @@ export class ImagesGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
 		if (!tokens.includes(token)) {
 			client.emit('unauthorized')
+			console.warn('Socket tried to connect with invalid token')
 			return client.disconnect()
 		}
 
